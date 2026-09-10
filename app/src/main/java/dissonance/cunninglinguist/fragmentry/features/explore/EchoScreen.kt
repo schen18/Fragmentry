@@ -155,7 +155,7 @@ fun EchoScreen(
                             textAlign = TextAlign.Center,
                             lineHeight = 34.sp,
                         ),
-                        cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.3f)),
+                        cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)),
                     )
                     LaunchedEffect(Unit) { focusRequester.requestFocus() }
                 } else {
@@ -255,7 +255,7 @@ fun EchoScreen(
                             AtmosphericShard(
                                 fragment = resonance,
                                 modifier = Modifier.graphicsLayer { translationX = drift },
-                                alpha = if (resonance.isPinned) 0.6f else 0.35f,
+                                alpha = if (resonance.isPinned) 0.8f else 0.6f,
                                 isLuminous = resonance.isPinned,
                                 jitterValue = resonance.embedding?.getOrNull(0),
                                 fontSize = 16.sp,
@@ -284,7 +284,7 @@ fun EchoScreen(
             ) {
                 AmbientAffordance(
                     text = "← field",
-                    alpha = 0.45f,
+                    alpha = 0.65f,
                     description = "return to field",
                     onClick = onRelease
                 )
@@ -292,7 +292,7 @@ fun EchoScreen(
                 focus?.let { fragment ->
                     AmbientAffordance(
                         text = if (fragment.isPinned) "collected" else "collect",
-                        alpha = if (fragment.isPinned) 0.8f else 0.45f,
+                        alpha = if (fragment.isPinned) 0.8f else 0.65f,
                         shadow = if (fragment.isPinned) {
                             Shadow(
                                 color = AmberPatina.copy(alpha = 0.5f),
@@ -306,7 +306,7 @@ fun EchoScreen(
 
                     AmbientAffordance(
                         text = "dissolve",
-                        alpha = 0.45f,
+                        alpha = 0.65f,
                         description = "dissolve fragment into the void",
                     ) {
                         cancelEditing()

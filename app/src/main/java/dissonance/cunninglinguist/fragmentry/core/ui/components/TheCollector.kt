@@ -43,13 +43,13 @@ fun TheCollector(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.8f))
+                .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.95f))
                 .padding(vertical = 16.dp)
         ) {
             Text(
                 text = "collected shards",
                 style = TextStyle(
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f),
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f),
                     fontSize = 10.sp,
                     fontFamily = FontFamily.SansSerif,
                     letterSpacing = 2.sp
@@ -68,7 +68,7 @@ fun TheCollector(
                     AtmosphericShard(
                         fragment = fragment,
                         modifier = Modifier.widthIn(max = 200.dp),
-                        alpha = 0.6f,
+                        alpha = 0.75f,
                         isLuminous = true,
                         fontSize = 13.sp,
                         lineHeight = 18.sp,

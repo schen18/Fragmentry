@@ -62,7 +62,7 @@ object Atmosphere {
                 }
                 
                 val fontSize = (14 + (sizeRatio * 10)).sp
-                val alpha = (0.4f + (sizeRatio * 0.4f))
+                val alpha = (0.6f + (sizeRatio * 0.4f))
                 
                 Text(
                     text = "#$motif",

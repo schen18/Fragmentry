@@ -335,14 +335,14 @@ class MainActivity : ComponentActivity() {
                         ) { data ->
                             Row(
                                 modifier = Modifier
-                                    .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.8f))
+                                    .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.95f))
                                     .padding(horizontal = 24.dp, vertical = 12.dp),
                                 verticalAlignment = Alignment.CenterVertically,
                             ) {
                                 Text(
                                     text = data.visuals.message,
                                     style = TextStyle(
-                                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.9f),
                                         fontSize = 14.sp,
                                         fontFamily = FontFamily.SansSerif,
                                         letterSpacing = 1.sp
@@ -355,7 +355,7 @@ class MainActivity : ComponentActivity() {
                                             .padding(start = 16.dp)
                                             .clickable { data.performAction() },
                                         style = TextStyle(
-                                            color = AmberPatina.copy(alpha = 0.8f),
+                                            color = AmberPatina.copy(alpha = 0.9f),
                                             fontSize = 14.sp,
                                             fontFamily = FontFamily.SansSerif,
                                             letterSpacing = 1.sp

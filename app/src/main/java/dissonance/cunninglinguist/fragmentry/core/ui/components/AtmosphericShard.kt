@@ -78,13 +78,13 @@ fun AtmosphericShard(
                 .size(8.dp) // Larger for visibility
                 .clip(CircleShape)
                 .background(
-                    if (isLuminous) AmberPatina.copy(alpha = 0.8f) 
-                    else MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
+                    if (isLuminous) AmberPatina.copy(alpha = 0.8f)
+                    else MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                 )
                 .drawBehind {
                     drawCircle(
                         color = (if (isLuminous) AmberPatina else onBackgroundColor)
-                            .copy(alpha = 0.15f),
+                            .copy(alpha = 0.25f),
                         radius = size.maxDimension * 3f
                     )
                 }

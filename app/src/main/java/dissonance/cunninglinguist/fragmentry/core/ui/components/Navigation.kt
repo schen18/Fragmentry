@@ -50,8 +50,8 @@ private fun NavItem(
     val alpha by if (isActive) {
         val transition = rememberInfiniteTransition(label = "nav_pulse")
         transition.animateFloat(
-            initialValue = 0.3f,
-            targetValue = 0.5f,
+            initialValue = 0.75f,
+            targetValue = 1.0f,
             animationSpec = infiniteRepeatable(
                 animation = tween(durationMillis = 4000, easing = LinearEasing),
                 repeatMode = RepeatMode.Reverse,
@@ -59,7 +59,7 @@ private fun NavItem(
             label = "pulse_alpha",
         )
     } else {
-        remember { mutableFloatStateOf(0.3f) }
+        remember { mutableFloatStateOf(0.65f) }
     }
 
     val color = if (isActive) AmberPatina.copy(alpha = alpha) else MaterialTheme.colorScheme.onBackground.copy(alpha = alpha)

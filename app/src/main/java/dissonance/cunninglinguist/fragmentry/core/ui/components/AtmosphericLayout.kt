@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 fun AmbientAffordance(
     text: String,
     modifier: Modifier = Modifier,
-    alpha: Float = 0.3f,
+    alpha: Float = 0.6f,
     shadow: Shadow? = null,
     description: String? = null,
     onClick: (() -> Unit)? = null

@@ -59,7 +59,7 @@ fun SparkScreen(
         ) {
             AmbientAffordance(
                 text = "cancel",
-                alpha = 0.2f,
+                alpha = 0.55f,
                 description = "cancel capture",
                 onClick = onDismiss
             )
@@ -86,7 +86,7 @@ fun SparkScreen(
                         textAlign = TextAlign.Center,
                         lineHeight = 36.sp
                     ),
-                    cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)),
+                    cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)),
                     keyboardOptions = KeyboardOptions(
                         capitalization = KeyboardCapitalization.Sentences,
                         imeAction = ImeAction.Default
@@ -101,7 +101,7 @@ fun SparkScreen(
                                     Text(
                                         text = "a spark...",
                                         style = TextStyle(
-                                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.15f),
+                                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f),
                                             fontSize = 24.sp,
                                             fontFamily = FontFamily.Serif,
                                             textAlign = TextAlign.Center
@@ -131,7 +131,7 @@ fun SparkScreen(
             ) {
                 AmbientAffordance(
                     text = "capture",
-                    alpha = 0.4f,
+                    alpha = 0.7f,
                     description = "capture fragment",
                 ) {
                     viewModel.sparkFragment()

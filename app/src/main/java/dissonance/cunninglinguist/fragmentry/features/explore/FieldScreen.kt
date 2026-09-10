@@ -70,20 +70,20 @@ fun FieldScreen(
                     onValueChange = viewModel::setSearchQuery,
                     modifier = Modifier.fillMaxWidth(0.7f),
                     textStyle = TextStyle(
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f),
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.9f),
                         fontSize = 16.sp,
                         fontFamily = FontFamily.SansSerif,
                         textAlign = TextAlign.Center,
                         letterSpacing = 2.sp,
                     ),
-                    cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.3f)),
+                    cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)),
                     decorationBox = { innerTextField ->
                         Box(contentAlignment = Alignment.Center) {
                             if (state.searchQuery.isEmpty()) {
                                 Text(
                                     text = "seek...",
                                     style = TextStyle(
-                                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.4f),
+                                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f),
                                         fontSize = 16.sp,
                                         fontFamily = FontFamily.SansSerif,
                                         textAlign = TextAlign.Center,
@@ -100,12 +100,12 @@ fun FieldScreen(
                     text = "close",
                     modifier = Modifier
                         .padding(top = 8.dp)
-                        .clickable { 
+                        .clickable {
                             isSearching = false
                             viewModel.setSearchQuery("")
                         },
                     style = TextStyle(
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.4f),
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                         fontSize = 10.sp,
                         fontFamily = FontFamily.SansSerif,
                         letterSpacing = 1.sp,
@@ -116,7 +116,7 @@ fun FieldScreen(
                     text = "the field",
                     modifier = Modifier.clickable { isSearching = true },
                     style = TextStyle(
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.4f),
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                         fontSize = 14.sp,
                         fontFamily = FontFamily.Serif,
                         letterSpacing = 4.sp,
@@ -192,7 +192,7 @@ fun FieldScreen(
                                     AtmosphericShard(
                                         fragment = fragment,
                                         modifier = Modifier.padding(vertical = 16.dp),
-                                        alpha = if (fragment.isPinned) 1.0f else 0.75f,
+                                        alpha = if (fragment.isPinned) 1.0f else 0.85f,
                                         isLuminous = fragment.isPinned,
                                         jitterValue = fragment.embedding?.getOrNull(0),
                                         textAlign = TextAlign.Center,
@@ -244,21 +244,21 @@ private fun NebulaHeader(
                 text = if (isSubtle) motif else "#$motif",
                 style = TextStyle(
                     color = if (isSubtle) {
-                        MaterialTheme.colorScheme.onBackground.copy(alpha = 0.25f)
+                        MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
                     } else {
-                        dissonance.cunninglinguist.fragmentry.core.ui.theme.AmberPatina.copy(alpha = 0.6f)
+                        dissonance.cunninglinguist.fragmentry.core.ui.theme.AmberPatina.copy(alpha = 0.85f)
                     },
                     fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
                     letterSpacing = 6.sp,
                 )
             )
-            
+
             if (isCollapsed) {
                 Text(
                     text = " ...",
                     style = TextStyle(
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.2f),
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.45f),
                         fontSize = 14.sp,
                         fontFamily = FontFamily.SansSerif
                     )
@@ -285,8 +285,8 @@ private fun EmptyField(isSeeking: Boolean) {
 
     val infiniteTransition = rememberInfiniteTransition(label = "breathing")
     val alpha by infiniteTransition.animateFloat(
-        initialValue = 0.35f,
-        targetValue = 0.55f,
+        initialValue = 0.55f,
+        targetValue = 0.75f,
         animationSpec = infiniteRepeatable(
             animation = tween(durationMillis = 4000, easing = LinearEasing),
             repeatMode = RepeatMode.Reverse

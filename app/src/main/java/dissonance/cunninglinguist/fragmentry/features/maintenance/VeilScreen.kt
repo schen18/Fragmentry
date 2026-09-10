@@ -55,7 +55,7 @@ fun VeilScreen(
             Text(
                 text = "the veil",
                 style = TextStyle(
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.45f),
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.65f),
                     fontSize = 14.sp,
                     fontFamily = FontFamily.Serif,
                     letterSpacing = 4.sp,
@@ -89,7 +89,7 @@ fun VeilScreen(
             Text(
                 text = if (isMLReady) "the resonance is clear" else "the resonance is settling",
                 style = TextStyle(
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.4f),
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                     fontSize = 10.sp,
                     fontFamily = FontFamily.SansSerif,
                     letterSpacing = 1.sp,
@@ -112,7 +112,7 @@ fun VeilScreen(
                         Text(
                             text = "migrating fragments",
                             style = TextStyle(
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.85f),
                                 fontSize = 16.sp,
                                 fontFamily = FontFamily.Serif,
                                 letterSpacing = 2.sp
@@ -128,8 +128,8 @@ fun VeilScreen(
                         LinearProgressIndicator(
                             progress = { progress },
                             modifier = Modifier.fillMaxWidth(),
-                            color = dissonance.cunninglinguist.fragmentry.core.ui.theme.AmberPatina.copy(alpha = 0.6f),
-                            trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f),
+                            color = dissonance.cunninglinguist.fragmentry.core.ui.theme.AmberPatina.copy(alpha = 0.9f),
+                            trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.25f),
                         )
                         
                         Spacer(modifier = Modifier.height(16.dp))
@@ -137,7 +137,7 @@ fun VeilScreen(
                         Text(
                             text = "${migrationState.current} / ${migrationState.total}",
                             style = TextStyle(
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
                                 fontSize = 12.sp,
                                 fontFamily = FontFamily.SansSerif
                             )
@@ -163,7 +163,7 @@ private fun MaintenanceAction(
         Text(
             text = title,
             style = TextStyle(
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.85f),
                 fontSize = 20.sp,
                 fontFamily = FontFamily.Serif,
             ),
@@ -171,7 +171,7 @@ private fun MaintenanceAction(
         Text(
             text = subtitle,
             style = TextStyle(
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.35f),
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.65f),
                 fontSize = 12.sp,
                 fontFamily = FontFamily.SansSerif,
                 textAlign = TextAlign.Center,

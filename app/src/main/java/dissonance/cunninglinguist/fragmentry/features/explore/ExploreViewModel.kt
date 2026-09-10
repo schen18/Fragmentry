@@ -402,8 +402,10 @@ class ExploreViewModel(
             val embedding = textEmbedder.embed(newText).getOrNull()
             val updated = fresh.copy(
                 text = newText,
+                // Keep the stale vector for ranking in the meantime, but drop
+                // the fingerprint so the backfill pass knows to re-embed.
                 embedding = embedding ?: fresh.embedding,
-                modelFingerprint = if (embedding != null) textEmbedder.getModelFingerprint() else fresh.modelFingerprint,
+                modelFingerprint = if (embedding != null) textEmbedder.getModelFingerprint() else null,
             )
             repository.updateFragment(updated)
             if (_focusFragment.value?.id == updated.id) {

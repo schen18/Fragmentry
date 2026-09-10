@@ -46,7 +46,7 @@ fun CollectorScreen(
                 text = "nothing collected yet",
                 modifier = Modifier.align(Alignment.Center),
                 style = TextStyle(
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.35f),
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                     fontSize = 16.sp,
                     fontFamily = FontFamily.Serif,
                     letterSpacing = 2.sp
@@ -70,7 +70,7 @@ fun CollectorScreen(
                         Text(
                             text = "assembly",
                             style = TextStyle(
-                                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.45f),
+                                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.65f),
                                 fontSize = 14.sp,
                                 fontFamily = FontFamily.Serif,
                                 letterSpacing = 4.sp
@@ -83,7 +83,7 @@ fun CollectorScreen(
                         ) {
                             AmbientAffordance(
                                 text = "weave",
-                                alpha = 0.4f,
+                                alpha = 0.65f,
                                 description = "copy all to clipboard",
                                 onClick = {
                                     val poem = pinnedFragments.joinToString("\n\n") { it.text }
@@ -92,7 +92,7 @@ fun CollectorScreen(
                             )
                             AmbientAffordance(
                                 text = "preserve",
-                                alpha = 0.4f,
+                                alpha = 0.65f,
                                 description = "export as text file",
                                 onClick = onExport
                             )

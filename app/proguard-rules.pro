@@ -19,6 +19,13 @@
     kotlinx.serialization.KSerializer serializer(...);
 }
 
+# LiteRT/TensorFlow Lite: the runtime reaches its classes through JNI and
+# reflection, so R8 shrinking/renaming breaks interpreter creation. Inert
+# while isMinifyEnabled=false, but guards any future minified release.
+-keep class org.tensorflow.lite.** { *; }
+-keep class org.tensorflow.lite.support.** { *; }
+-dontwarn org.tensorflow.lite.**
+
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
